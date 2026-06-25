@@ -30,7 +30,7 @@ a { text-decoration: none; }
   display: flex; align-items: center; gap: 10px;
   margin-right: 32px; flex-shrink: 0;
 }
-.nav-logo svg { width: 28px; height: 28px; }
+.nav-logo svg { height: 36px; width: auto; overflow: visible; }
 .nav-logo span { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; }
 .nav-tabs { display: flex; align-items: stretch; flex: 1; height: 100%; }
 .nav-tab {
@@ -253,16 +253,18 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
 </head>
 <body>
 
-<!-- ══ NAVBAR ══ -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-logo">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26C17.81 13.47 19 11.38 19 9c0-3.87-3.13-7-7-7z" fill="#00A1E0"/>
+    <svg viewBox="0 0 263 185" xmlns="http://www.w3.org/2000/svg" style="height:32px;width:auto;display:block;">
+      <path fill="#00A1E0" d="M109.8 25.8c8.7-9 20.7-14.6 34-14.6 17.8 0 33.4 9.8 41.5 24.4 7-3.1 14.8-4.9 23-4.9 32.1 0 58.1 26.1 58.1 58.3 0 3.9-.4 7.7-1.2 11.3 10.4 5.5 17.5 16.4 17.5 28.9 0 18.2-14.7 32.9-32.8 32.9H44.2C26 162.1 11 147 11 128.6c0-14.5 9.3-26.9 22.3-31.5-1.2-4.7-1.9-9.5-1.9-14.5C21.4 50.4 47.4 24.3 79.5 24.3c7.4 0 14.5 1.4 20.9 3.9-.2-1-.3-2-.3-3.1 0 .3.2.5.5.2-.1.1-.6.4-.8.5z"/>
+      <text x="131" y="118" text-anchor="middle" fill="white" font-family="-apple-system,BlinkMacSystemFont,Helvetica Neue,Arial,sans-serif" font-size="68" font-weight="400" letter-spacing="-1">salesforce</text>
     </svg>
-    <span>SALESFORCE</span>
+  </div>
   </div>
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="switchTab('home', this)">Overview</button>
+    <button class="nav-tab" onclick="switchTab('about', this)">About Me</button>
     <button class="nav-tab" onclick="switchTab('journey', this)">The Journey</button>
     <button class="nav-tab" onclick="switchTab('business', this)">Business</button>
     <button class="nav-tab" onclick="switchTab('strategy', this)">GTM Strategy</button>
@@ -272,16 +274,15 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
     <button class="nav-tab" onclick="switchTab('ask', this)">The Ask</button>
   </div>
   <div class="nav-actions">
-    <a href="https://bdr-coach.onrender.com" target="_blank" class="btn-app">
-      <span>⚡</span> Live App
-    </a>
+    <a href="https://bdr-coach.onrender.com" target="_blank" class="btn-app" title="State Government Coach" style="padding:8px 12px;">🏛️ State</a>
+    <a href="https://bdr-coach.onrender.com" target="_blank" class="btn-app" title="Local Council Coach" style="padding:8px 12px; background:var(--blue);">🏢 Council</a>
     <button class="btn-pdf" onclick="window.print()">
       <span>↓</span> Download PDF
     </button>
   </div>
 </nav>
 
-<!-- ══ METRICS BANNER (always visible) ══ -->
+
 <div class="metrics-banner">
   <div class="metrics-intro">
     <div class="eyebrow">Salesforce · Public Sector · FY27</div>
@@ -299,12 +300,76 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ══════════════════════════════════════ -->
-<!--  PANELS                               -->
-<!-- ══════════════════════════════════════ -->
 
-<!-- ── OVERVIEW ── -->
+<!--  PANELS                               -->
+
+<!-- ABOUT ME -->
+<div class="panel" id="tab-about">
+  <div class="section dark">
+    <div class="eyebrow">About Me</div>
+    <h2 class="sh w">Purpose-Driven. People-First. Proven.</h2>
+    <p class="lead w">I started life in a small town with big ambitions. That curiosity took me around the world — leading award-winning teams at five-star properties in London, discovering that my greatest skill was not the industry. It was building people. That realisation brought me to Salesforce.</p>
+    <div class="grid-2">
+      <div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:28px;margin-bottom:20px;">
+          <h3 style="color:var(--cloud);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;">My Values</h3>
+          <ul style="list-style:none;">
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);line-height:1.4;"><strong style="color:#fff;">People first</strong> — the strongest teams are built on genuine connection, safety and trust</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);line-height:1.4;"><strong style="color:#fff;">Giving back</strong> — VTO Officer, Women in Business events, mentoring, volunteering with NFPs</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);line-height:1.4;"><strong style="color:#fff;">Continuous growth</strong> — if you are not growing, you are standing still. I invest in myself and everyone around me</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);line-height:1.4;"><strong style="color:#fff;">Accountability with empathy</strong> — high standards and the environment where people can meet them</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;line-height:1.4;"><strong style="color:#fff;">Fun matters</strong> — I play hard and have fun. A great team does not have to be serious to be excellent</li>
+          </ul>
+        </div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:28px;">
+          <h3 style="color:var(--cloud);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;">Before Salesforce</h3>
+          <ul style="list-style:none;">
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Managed Endota Spas across Sydney — Four Seasons, Rozelle, Martin Place</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);">Built high-performance teams across premium locations — internal stakeholder management was essential</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.08);">"Residential Day Spa of the Year" — Professional Beauty Awards 2014</li>
+            <li style="color:rgba(255,255,255,0.75);font-size:14px;padding:9px 0;">Headhunted into tech — became a BDR then Team Lead then AE. The rest is here.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start;">
+        <div class="photo-card" style="grid-column:1/-1;"><img src="images/presentations.jpg" style="width:100%;height:auto;max-height:260px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">Leading from the front</div></div>
+        <div class="photo-card"><img src="images/volunteering%20with%20NFP.png" style="width:100%;height:auto;max-height:220px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">VTO with NFP</div></div>
+        <div class="photo-card"><img src="images/Tour%20De%20Cure%20gala.png" style="width:100%;height:auto;max-height:220px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">Tour De Cure Gala</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="section grey">
+    <div class="eyebrow">Community and Culture</div>
+    <h2 class="sh">I Build Communities Not Just Teams</h2>
+    <p class="lead">From Women in Business events to NFP volunteering to charity galas I show up for the community I am part of.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:24px;">
+      <div class="photo-card"><img src="images/gala%20at%20food%20ladder.png" style="width:100%;height:auto;max-height:240px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">Gala at Food Ladder</div></div>
+      <div class="photo-card"><img src="images/bdr%20fun.jpg" style="width:100%;height:auto;max-height:240px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">BDR Team fun and results</div></div>
+      <div class="photo-card"><img src="images/new%20zealand%20holiday.png" style="width:100%;height:auto;max-height:240px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">Curiosity is a superpower</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div class="photo-card"><img src="images/pub%20sec%20and%20nfp%20team.jpg" style="width:100%;height:auto;max-height:300px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">Public Sector and NGO Team</div></div>
+      <div class="photo-card"><img src="images/salesforce%20ae%20team.jpg" style="width:100%;height:auto;max-height:300px;object-fit:contain;" onerror="this.parentElement.style.display='none'"><div class="photo-caption">Salesforce AE Team</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- OVERVIEW -->
 <div class="panel active" id="tab-home">
+  <!-- PEER QUOTES OPENER -->
+  <div style="background:var(--navy); padding:32px 48px; display:grid; grid-template-columns:1fr 1fr; gap:24px; border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;position:relative;">
+      <div style="color:rgba(255,255,255,0.06);font-size:80px;font-family:Georgia;position:absolute;top:-10px;left:16px;line-height:1;">&ldquo;</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.7;font-style:italic;position:relative;">"I wouldn't still be at Salesforce if it wasn't for Kyla. I was on the verge of quitting and Kyla came to the rescue. She listened, she supported and most of all she cared. <strong style="color:var(--cloud);font-style:normal;">Kyla would make a brilliant Business Development Manager and the BDRs would be lucky to have her.</strong>"</p>
+      <p style="color:var(--cloud);font-size:11px;font-weight:700;margin-top:12px;">Josie Clifton &mdash; Account Executive, Enterprise Corporate Sales, UK Public Sector</p>
+    </div>
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;position:relative;">
+      <div style="color:rgba(255,255,255,0.06);font-size:80px;font-family:Georgia;position:absolute;top:-10px;left:16px;line-height:1;">&ldquo;</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.7;font-style:italic;position:relative;">"Her guidance, feedback and knowledge really made me perceive her as a mentor and leader alongside my manager. <strong style="color:var(--cloud);font-style:normal;">Kyla has been super helpful, and I believe she has had a severe impact in my career thus far.</strong>"</p>
+      <p style="color:var(--cloud);font-size:11px;font-weight:700;margin-top:12px;">Ibrahim Kazan &mdash; SDR &rarr; BDR, Salesforce ANZ</p>
+    </div>
+  </div>
   <!-- 3 TAKEAWAYS BANNER -->
   <div style="background:var(--navy); padding:28px 48px; display:flex; gap:24px; align-items:stretch; flex-wrap:wrap;">
     <div style="color:var(--cloud); font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; align-self:center; flex-shrink:0; margin-right:8px;">3 Things to Leave With</div>
@@ -367,7 +432,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
           <h3>AI Proof</h3>
           <ul>
             <li>10 live Slackbot skills deployed</li>
-            <li>AusFed BDR Coach — production app</li>
+            <li>State &amp; Local Gov BDR Coach — production app</li>
             <li>Claude API · Extended thinking · SSE</li>
             <li>Replicable for NFP · Available to AEs</li>
           </ul>
@@ -377,7 +442,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── THE JOURNEY ── -->
+<!-- THE JOURNEY -->
 <div class="panel" id="tab-journey">
   <div class="section white">
     <div class="eyebrow">The Journey</div>
@@ -387,7 +452,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
       <div class="stat-block"><div class="n cloud">193%</div><div class="l">BDR S2 Attainment<br>252% S4</div></div>
       <div class="stat-block"><div class="n cloud">$1.3M</div><div class="l">ACV Closed<br>as BDR</div></div>
       <div class="stat-block"><div class="n cloud">289%</div><div class="l">ESB AE<br>Q3 Overachievement</div></div>
-      <div class="stat-block"><div class="n cloud">117%</div><div class="l">FY26 AE<br>Quota</div></div>
+      <div class="stat-block"><div class="n cloud">107%</div><div class="l">FY26 ACV<br>Quota</div></div>
       <div class="stat-block"><div class="n green">APAC</div><div class="l">Top Performer<br>Q1 &amp; Q3</div></div>
       <div class="stat-block"><div class="n white">Global</div><div class="l">SDR of Q1<br>— Phoebe Wilkinson</div></div>
     </div>
@@ -399,9 +464,9 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
             <li><strong>107% FY26 quota</strong> while investing in leadership above the line</li>
             <li><strong>VTO Officer, Public Sector</strong> — high-visibility, values-aligned</li>
             <li><strong>FY27 ANZ Mentor Circles</strong> (Symmetra) — selected 2 consecutive years</li>
-            <li>Monthly 1:1 mentoring of <strong>Corrina Wong</strong> into Account Specialist role</li>
+            <li>Supporting <strong>Corrina Wong</strong> in her preparation for Account Specialist interview</li>
             <li>Referred Phoebe → <strong>Global SDR of Q1, 135% attainment</strong> → promoted to BDR</li>
-            <li>Built <strong>10 Slackbot skills + AusFed BDR Coach</strong> — live tools on real deals</li>
+            <li>Built <strong>10 Slackbot skills + State &amp; Local Gov BDR Coach</strong> — live tools on real deals</li>
           </ul>
         </div>
         <div class="card tgreen">
@@ -431,7 +496,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── BUSINESS ── -->
+<!-- BUSINESS -->
 <div class="panel" id="tab-business">
   <div class="section grey">
     <div class="eyebrow">Business Acumen</div>
@@ -459,10 +524,10 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
       <div class="card tgreen">
         <h3>What's Working — Build On It</h3>
         <ul>
-          <li><strong>NGO pipe gen +111% YoY</strong> — model this motion and replicate into GPS</li>
+          <li><strong>NGO pipe gen +111% YoY</strong> — what is driving this? Extract the playbook and apply it to GPS State &amp; Local</li>
           <li><strong>Signature Success: 60 plans FY27</strong> — expanding customer base</li>
           <li>Programs: <strong>#Data · #APS · #LPI · #IVC · #WTD · #C&amp;C · #CONTACT · #GRANT</strong></li>
-          <li>Top BDR: <strong>Luke Dietrich $6.4M pipeline</strong> · Felicity Jones 15 opps</li>
+          <li>Top BDR: <strong>Luke Dietrich $6.4M pipeline</strong></li>
           <li>34% marketing contribution to pipe ($57.3M YTD)</li>
         </ul>
       </div>
@@ -483,7 +548,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
           <tr><td>GPS Pipeline Volume <span class="badge r">31%</span></td><td>$41.3M vs $133.5M · $13M/week needed</td><td>Outreach confidence — call blocks, boiler rooms. Dreamforce is the immediate activation.</td><td>Activate all programs with AE alignment. Every event a BDR pipeline moment.</td></tr>
           <tr><td>AE Collaboration <span class="badge a">42% ACV</span></td><td>AEs not sourcing alongside BDRs · some new to the BDR model</td><td>Educate AEs on the model. Proof of concept with willing AEs first, bring results to the rest.</td><td>Monthly joint sourcing. BDR-to-ECS alumni as bridge. Quality notes = AE-ready pipeline.</td></tr>
           <tr><td>Pipeline Velocity <span class="badge r">12%</span></td><td>$4M in Stage 1s not reviewed · handoff breakdown</td><td>BVS template adherence · MEDDIC discipline. A meeting that doesn't convert is a wasted conversation.</td><td>Fix Stage 1 review process with AEs in Day 1–30. Weekly pipeline council.</td></tr>
-          <tr><td>Agentforce Confidence <span class="badge a">Gap</span></td><td>Inconsistent messaging · BDRs avoiding the conversation</td><td>Day 1–30: diagnose first. What's blocking — knowledge, confidence, or objections?</td><td>Monthly play → Agentforce blitz. Hands-on, tied to real accounts.</td></tr>
+          <tr><td>Agentforce Readiness <span class="badge a">Opportunity</span></td><td>Inconsistent messaging · BDRs avoiding the conversation</td><td>Day 1–30: diagnose first. What's blocking — knowledge, confidence, or objections?</td><td>Monthly play → Agentforce blitz. Hands-on, tied to real accounts.</td></tr>
           <tr><td>Microsoft Copilot <span class="badge r">Threat</span></td><td>Govt AI trials showing limitations — BDRs can't articulate the counter</td><td>Weekly competitive roleplay. "What can Copilot not do for you yet?"</td><td>Agentforce vs Copilot talk-track — integrated into onboarding and huddles.</td></tr>
         </tbody>
       </table>
@@ -491,7 +556,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── GTM STRATEGY ── -->
+<!-- GTM STRATEGY -->
 <div class="panel" id="tab-strategy">
   <div class="section dark">
     <div class="eyebrow">Go-To-Market</div>
@@ -561,7 +626,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── COACHING & AI ── -->
+<!-- COACHING & AI -->
 <div class="panel" id="tab-coaching">
   <div class="section white">
     <div class="eyebrow">Coaching Philosophy</div>
@@ -571,7 +636,11 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
       <div style="color:var(--cloud); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; align-self:center; flex-shrink:0;">This Tab:</div>
       <div style="color:rgba(255,255,255,0.75); font-size:13px; flex:1;">1. <strong style="color:#fff;">I reduce noise, not add to it</strong> — AI takes admin off the plate so BDRs can sell &nbsp;·&nbsp; 2. <strong style="color:#fff;">Coaching is individualised</strong> — every BDR gets specific feedback on their actual calls &nbsp;·&nbsp; 3. <strong style="color:#fff;">I built the tool that solves onboarding</strong> — new team, ramped fast</div>
     </div>
-    <p class="lead">We do incredible product training at Salesforce. What hasn't always matched that investment is development of <strong>sales skills themselves</strong> — cold call craft, discovery excellence, objection handling, executive presence. A BDR can know every Salesforce product and still struggle on the phone. That gap is what my coaching philosophy, and the tools I've built, are designed to close.</p>
+    <p class="lead">We do incredible product training at Salesforce. What hasn't always matched that investment is development of <strong>sales skills themselves</strong> — cold call craft, discovery excellence, objection handling, executive presence. A BDR can know every Salesforce product and still struggle on the phone. That gap is what my coaching philosophy is designed to close.</p>
+    <div style="background:var(--navy); border-radius:10px; padding:20px 28px; margin-bottom:32px;">
+      <div style="color:var(--cloud); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; margin-bottom:8px;">The Quality Pipeline Problem</div>
+      <p style="color:rgba(255,255,255,0.75); font-size:14px; line-height:1.6;">Right now, BDRs are generating Stage 2s for the optics — to hit the KPI. Quality pipeline is the #1 concern from AE and leadership. My coaching approach directly addresses this: <strong style="color:#fff;">I coach to what makes a meeting worth booking, not how many meetings to book.</strong> Quality discovery notes, MEDDIC-aligned qualification, AE-ready handoffs. That's what builds trust with AEs and converts pipeline to ACV.</p>
+    </div>
     <div class="grid-2" style="margin-bottom:40px;">
       <div>
         <div class="card tcloud" style="margin-bottom:20px;">
@@ -634,8 +703,8 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
     <div class="app-header">
       <div>
         <div class="app-badge">Live App · Claude API</div>
-        <div class="app-title">AusFed BDR Coach</div>
-        <div class="app-desc">Production coaching application purpose-built for Australian Federal Government BDR training. 4 modes: cold call simulation, discovery practice, MEDDIC scoring, structured lessons.</div>
+        <div class="app-title">State &amp; Local Gov BDR Coach</div>
+        <div class="app-desc">Production coaching application purpose-built for State &amp; Local Government BDR training — two specialised coaches: one for State Gov, one for Local Council. 4 modes: cold call simulation, discovery practice, MEDDIC scoring, structured lessons.</div>
       </div>
       <a href="https://bdr-coach.onrender.com" target="_blank" class="btn-launch">
         Open Live App ↗
@@ -675,7 +744,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── 30/60/90 ── -->
+
 <div class="panel" id="tab-plan">
   <div class="section grey">
     <div class="eyebrow">Strategic Plan</div>
@@ -757,7 +826,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── PEOPLE ── -->
+<!-- PEOPLE -->
 <div class="panel" id="tab-people">
   <div class="section dark">
     <div class="eyebrow">Talent Lifecycle</div>
@@ -798,16 +867,16 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
     <p class="lead w" style="margin-bottom:0;">Six years of Salesforce community — the relationships I'll carry into this role.</p>
     <div class="photo-grid" style="margin-bottom:48px;">
       <div class="photo-card" style="grid-column:1/-1;">
-        <img src="images/team-hero.jpg" alt="Team event" onerror="this.src='images/team-1.jpg'" style="height:380px;">
-        <div class="photo-caption">🏆 Winners Dinner — the team that delivers together</div>
+        <img src="images/pub%20sec%20and%20nfp%20team.jpg" alt="Team event" onerror="this.src='images/team-1.jpg'" style="height:380px;">
+        <div class="photo-caption">🏆 Public Sector & NGO Team — the community I'm proud to be part of</div>
       </div>
       <div class="photo-card">
-        <img src="images/team-1.jpg" alt="Team celebration" onerror="this.parentElement.style.display='none'">
-        <div class="photo-caption">Building connections that last</div>
+        <img src="images/salesforce%20ae%20team.jpg" alt="Team celebration" onerror="this.parentElement.style.display='none'">
+        <div class="photo-caption">💙 Salesforce AE Team — the relationships I carry into leadership</div>
       </div>
       <div class="photo-card">
-        <img src="images/team-2.jpg" alt="Team celebration" onerror="this.parentElement.style.display='none'">
-        <div class="photo-caption">The culture I'm bringing into this role</div>
+        <img src="images/bdr%20fun.jpg" alt="Team celebration" onerror="this.parentElement.style.display='none'">
+        <div class="photo-caption">🎉 BDR Team — fun, energy, and results. That's the culture.</div>
       </div>
     </div>
     <div class="eyebrow">What My People Say</div>
@@ -828,7 +897,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
   </div>
 </div>
 
-<!-- ── THE ASK ── -->
+<!-- THE ASK -->
 <div class="panel" id="tab-ask">
   <div class="closer">
     <div style="color:var(--cloud); font-size:10px; font-weight:700; letter-spacing:4px; text-transform:uppercase; margin-bottom:20px;">The Ask</div>
@@ -845,7 +914,7 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
       </div>
       <div class="cp">
         <h4>Day 1 Ready</h4>
-        <p>I know the dashboard, the team, the gaps, and the stakeholders. 10 AI tools running. AusFed BDR Coach ready to deploy. The title is the only thing that's new.</p>
+        <p>I know the dashboard, the team, the gaps, and the stakeholders. 10 AI tools running. State &amp; Local Gov BDR Coach ready to deploy. The title is the only thing that's new.</p>
       </div>
       <div class="cp">
         <h4>The North Star</h4>
@@ -853,13 +922,13 @@ footer span { color: rgba(255,255,255,0.25); font-size: 11px; }
       </div>
     </div>
     <div style="margin-top:48px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.1);">
-      <a href="https://bdr-coach.onrender.com" target="_blank" class="btn-launch" style="display:inline-flex; margin-right:16px; font-size:14px; padding:14px 28px;">⚡ Open AusFed BDR Coach Live App ↗</a>
+      <a href="https://bdr-coach.onrender.com" target="_blank" class="btn-launch" style="display:inline-flex; margin-right:16px; font-size:14px; padding:14px 28px;">⚡ Open State &amp; Local Gov BDR Coach Live App ↗</a>
       <button onclick="window.print()" class="btn-pdf" style="display:inline-flex; font-size:14px; padding:14px 28px; color:rgba(255,255,255,0.8);">↓ Download PDF</button>
     </div>
   </div>
 </div>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
   <span>Kyla Lynn-Evans · BDR Manager, Public Sector · FY27</span>
   <span>SALESFORCE CONFIDENTIAL</span>
